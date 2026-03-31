@@ -235,7 +235,14 @@
     // GAME LOGIC
     //-------------------------------------------------------------------------
 
-    function play() { hide('start'); reset();          playing = true;  }
+ function play() {
+  hide('start');
+  reset();
+  playing = true;
+
+  const music = document.getElementById("bgmusic");
+  music.play().catch(() => {});
+ }
     function lose() { show('start'); setVisualScore(); playing = false; }
 
     function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
