@@ -235,7 +235,11 @@
     // GAME LOGIC
     //-------------------------------------------------------------------------
 
-
+function play() {
+  hide('start');
+  reset();
+  playing = true;
+}
 
     function lose() { show('start'); setVisualScore(); playing = false; }
 
